@@ -50,6 +50,5 @@ public class Recursividad {
             return Mcd(n,m);
         else
             return Mcd(n,m%n);
-    }//git config --global user.email "samuel.arocad@unac.edu.co"
-    //git config --global user.name "Samuel Aroca"
+    }
 }
