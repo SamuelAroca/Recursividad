@@ -1,13 +1,4 @@
 public class Recursividad {
-    public static void main (String[] argv) {
-        //System.out.println(f(10));
-        //System.out.println(fib_recursivo(7));
-        //metodoA('Z');
-        //System.out.println(Suma(259));
-        //System.out.println(Mcd(36, 24));
-        hanoi('1','2','3',10);
-    }
-
     //Factotial
     public static int f(int n) {
         if (n == 1 || n == 0) {
@@ -66,4 +57,29 @@ public class Recursividad {
 			hanoi(varcentral, varinicial, varfinal, n - 1);
 		}
 	}
+    static double A[] = {1, 6, 7.7, 10.1, 14.8, 15.3, 20.3};
+	
+	static int busquedaBR(double a[], double clave, int inferior, int superior) {
+		int central;
+		if (inferior > superior) // no encontrado
+			return -1;
+		else {
+			central = (inferior + superior) / 2;
+			if (a[central] == clave)
+				return central;
+			else if (a[central] < clave)
+				return busquedaBR(a, clave, central + 1, superior);
+			else
+				return busquedaBR(a, clave, inferior, central - 1);
+		}
+	}
+    public static void main (String[] argv) {
+        //System.out.println(f(10));
+        //System.out.println(fib_recursivo(7));
+        //metodoA('Z');
+        //System.out.println(Suma(259));
+        //System.out.println(Mcd(36, 24));
+        //hanoi('1','2','3',10);
+        System.out.println(busquedaBR( A,  10.1,  0,  6));
+    }
 }
