@@ -5,6 +5,7 @@ public class Recursividad {
         //metodoA('Z');
         //System.out.println(Suma(259));
         //System.out.println(Mcd(36, 24));
+        hanoi('1','2','3',10);
     }
 
     //Factotial
@@ -51,4 +52,18 @@ public class Recursividad {
         else
             return Mcd(n,m%n);
     }
+    //Torres de Hanoi
+    static void hanoi(char varinicial, char varcentral, char varfinal, int n) {
+        
+		if (n == 1)
+			System.out.println("Mover disco " + n + " desde varilla " + varinicial + 
+					" a varilla " + varfinal);
+            
+		else {
+			hanoi(varinicial, varfinal, varcentral, n - 1);
+			System.out.println("Mover disco " + n + " desde varilla " + varinicial + 
+					" a varilla " + varfinal);
+			hanoi(varcentral, varinicial, varfinal, n - 1);
+		}
+	}
 }
