@@ -4,7 +4,7 @@ public class Recursividad {
         //System.out.println(fib_recursivo(7));
         //metodoA('Z');
         //System.out.println(Suma(259));
-        System.out.println(Mcd(36, 24));
+        //System.out.println(Mcd(36, 24));
     }
 
     //Factotial
@@ -50,5 +50,6 @@ public class Recursividad {
             return Mcd(n,m);
         else
             return Mcd(n,m%n);
-    }
+    }//git config --global user.email "samuel.arocad@unac.edu.co"
+    //git config --global user.name "Samuel Aroca"
 }
