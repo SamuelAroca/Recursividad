@@ -1,4 +1,6 @@
 public class Recursividad {
+
+    static char[] Digitos = {'0', '1','2','3', '4', '5','6', '7','8','9', 'A','B','C','D','E','F'};
     //Factotial
     public static int f(int n) {
         if (n == 1 || n == 0) {
@@ -76,14 +78,14 @@ public class Recursividad {
 
     static void decBin(int n, int b) {
         if (n < b) {
-            System.out.println(n);  
+            System.out.print(Digitos[n]);  
         }
         else if (b < 2 || b > 16){
             System.out.println("Debe ser una base entre 2 y 16");
         }  
         else {
             decBin(n / b, b);
-            System.out.println(n % b);
+            System.out.print(Digitos[n % b]);
         }
     }
     public static void main (String[] argv) {
@@ -94,6 +96,6 @@ public class Recursividad {
         //System.out.println(Mcd(36, 24));
         //hanoi('1','2','3',10);
         //System.out.println(busquedaBR( A,  10.1,  0,  6));
-        decBin(200, 16);
+        decBin(54475, 16);
     }
 }
