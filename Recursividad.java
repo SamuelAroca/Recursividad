@@ -77,7 +77,11 @@ public class Recursividad {
     static void decBin(int n, int b) {
         if (n < b) {
             System.out.println(n);  
-        } else {
+        }
+        else if (b < 2 || b > 16){
+            System.out.println("Debe ser una base entre 2 y 16");
+        }  
+        else {
             decBin(n / b, b);
             System.out.println(n % b);
         }
@@ -90,6 +94,6 @@ public class Recursividad {
         //System.out.println(Mcd(36, 24));
         //hanoi('1','2','3',10);
         //System.out.println(busquedaBR( A,  10.1,  0,  6));
-        decBin(200, 6);
+        decBin(200, 16);
     }
 }
