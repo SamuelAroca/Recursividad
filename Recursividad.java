@@ -73,6 +73,17 @@ public class Recursividad {
 				return busquedaBR(a, clave, inferior, central - 1);
 		}
 	}
+
+    static void decBin(int n) {
+        if (n < 2) {
+            System.out.println(n);
+            return;
+        } else {
+            decBin(n / 2);
+            System.out.println(n % 2);
+            return;
+        }
+    }
     public static void main (String[] argv) {
         //System.out.println(f(10));
         //System.out.println(fib_recursivo(7));
@@ -80,6 +91,7 @@ public class Recursividad {
         //System.out.println(Suma(259));
         //System.out.println(Mcd(36, 24));
         //hanoi('1','2','3',10);
-        System.out.println(busquedaBR( A,  10.1,  0,  6));
+        //System.out.println(busquedaBR( A,  10.1,  0,  6));
+        decBin(10345);
     }
 }
