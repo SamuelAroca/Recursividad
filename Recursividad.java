@@ -92,6 +92,6 @@ public class Recursividad {
         //System.out.println(Mcd(36, 24));
         //hanoi('1','2','3',10);
         //System.out.println(busquedaBR( A,  10.1,  0,  6));
-        decBin(10345);
+        decBin(10);
     }
 }
