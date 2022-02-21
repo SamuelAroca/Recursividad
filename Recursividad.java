@@ -74,14 +74,12 @@ public class Recursividad {
 		}
 	}
 
-    static void decBin(int n) {
-        if (n < 2) {
-            System.out.println(n);
-            return;
+    static void decBin(int n, int b) {
+        if (n < b) {
+            System.out.println(n);  
         } else {
-            decBin(n / 2);
-            System.out.println(n % 2);
-            return;
+            decBin(n / b, b);
+            System.out.println(n % b);
         }
     }
     public static void main (String[] argv) {
@@ -92,6 +90,6 @@ public class Recursividad {
         //System.out.println(Mcd(36, 24));
         //hanoi('1','2','3',10);
         //System.out.println(busquedaBR( A,  10.1,  0,  6));
-        decBin(10);
+        decBin(200, 6);
     }
 }
