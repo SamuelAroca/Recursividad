@@ -1,6 +1,6 @@
 public class Recursividad {
 
-    static char[] Digitos = {'0', '1','2','3', '4', '5','6', '7','8','9', 'A','B','C','D','E','F'};
+    static char[] Digitos = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
     //Factotial
     public static int f(int n) {
         if (n == 1 || n == 0) {
